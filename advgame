@@ -1,0 +1,99 @@
+
+
+
+from time import sleep
+
+
+answer = input("Would you like to play? [YES/NO]: ").lower().strip()
+if answer == "yes" or answer == "sure" or answer == "ok" or answer == "of course" or answer == "of course!":
+
+    name = input("Enter your name: ")
+    print(f"Hello {name}! .")
+    
+    start = input("Are you ready? [READY]: ").lower().strip()
+    if start == "ready":
+        answer = input("You're lost in a forrest and see a split. Do you want to go [LEFT] or [RIGHT]: ").lower().strip()
+
+        if answer == "left":
+            answer = input("It's dark and eerie, you hear something following you. Do you want to [TURN AROUND] or [SPEED UP]: ").lower().strip()
+
+            if answer == "turn around":
+                answer = input("The creature is sensitive to sound. After standing still for 5 minutes the creature walks away. [KEEP WALKING] [FOLLOW IT]: ").lower().strip()
+
+                if answer == "keep walking":
+                    answer = input("You see sunlight. Have you finally made it out of the forrest? Is this it? Do you want to [WALK INTO THE SUNLIGHT] or [CAUTIOUSLY CHECK IT OUT]: ").lower().strip()
+
+                    if answer == "walking into the sunlight":
+                        print("Fields of grass, birds chirping. You've done it. You're skin starts to burn, you scream from an unbearable pain. You've died. It was a trap.")
+                        quit()
+
+                    elif answer == "cautiously check it out":
+                        answer = input("You take a look outside from the shadow and notice that there's no source of light. Do you [GO OUT] anyway or [HEAD A DIFFERENT DIRECTION]: ").lower().strip()
+
+                        if answer == "go out":
+                            print("Fields of grass, birds chirping. You've done it. You're skin starts to burn, you scream from an unbearable pain. You've died. It was a trap.").lower().strip()
+                            quit()
+
+                        elif answer == "head a different direction":
+                            answer = input("While on your walk you spot a group of people that look to be hiking. Do you [GO ASK FOR DIRECTIONS] or [IGNORE THEM]: ").lower().strip()
+                        
+                            if answer == "go ask for directions":
+                                answer = input("The people ask you to join them since they were heading out as well. Do you [JOIN THEM] or [CONTINUE ON YOUR OWN]: ").lower().strip()
+
+                                if answer == "continue on your own":
+                                    answer = input("You leave them and occasionally look back to see what they're up to. As you continue walking you hear what sounds like a car. Do you want to [CHECK IT OUT] or [IGNORE IT]: ").lower().strip()
+
+                                elif answer == "join them":
+                                    destination = input(f'"Where are you off to {name}?": ').lower().strip()
+                                    if destination == "how do you know my name?":
+                                        print("After you ask that question you get no response but wispers among the 5 hikers. You blink and they're gone. You have a weird feeling in your stomach, when you look down you see a gaping whole in your chest. You died.")
+                                        quit()
+# print("As you walk with the hikers you start to realise that you're heading into a more eerie part of the forrest. You question their judgment but your question is met with nothing but silence. When you ask again they stop.")
+                                    else:
+                                        print(f'"Oh really? We\'re heading to {destination} as well. How convenient?"')
+                                        sleep(4);
+                                        print("As you walk with the hikers you start to realise that you're heading into a more eerie part of the forrest. You question their judgment but your question is met with nothing but silence. When you ask again they stop.")                                        
+                                        sleep(10);
+                                        print("You blink and they're gone. You have a weird feeling in your stomach, when you look down you see a gaping whole in your chest. You died.")
+
+
+                elif answer == "follow it":
+                    print("The creature turns around speraticly, it shocks you and the leaves makes a lound crunch...")
+                    print("You're dead... L bozo 😂")
+                    quit()
+
+            elif answer.lower().strip() == "speed up":
+                answer = input("cancer").lower().strip()
+
+        elif answer == "right" :
+            answer = input("The path looks sunny ahead and seems to be a smooth ride out. Would you like to [TAKE A BREAK] or [KEEP WALKING]: ").lower().strip()
+
+            if answer == "take a break":
+                answer = input("You sit down and look through your scrungy bag. There's a [MEUSILY BAR], a [PACKET OF CHIPS], and a [STICK OF CHEWED GUM]. Do you want to eat? [YES/NO]: ")
+
+                if answer == "yes":
+                    eat = input("What do you want to eat? [MEUSILY BAR], [PACKET OF CHIPS], or a [STICK OF CHEWED GUM]: ").lower().strip()
+
+                    if eat == "stick of chewed gum":
+                        print("Although still taste full it makes you want to barf everytime you chew. 10 minutes later you starve...")
+                        quit()
+                    
+                    elif eat == "packet of chips":
+                        print("As you munch away you start to get thirsty, you scavange through your bag and realise you don't have any water. After you've accepted that you're bound to die you")
+
+            elif answer == "keep walking":
+                answer = input("")
+        else:
+            print("Invalid repsonse.")
+            quit()
+    else:
+        print("Invalid repsonse.")
+        quit()
+    
+elif answer == "fuck off" or answer == "kys" or answer == "kill yourself" or answer == "kill your self" or answer == "kill yourself!" or answer == "die" or answer == "fuvk off" or answer == "cunt" or answer == "piss off" or answer == "fuck you" or answer == "fuck off!" or answer == "piss off" or answer == "fuck you!" or answer == "kill youself":
+    print("I hate you too 🌚")
+    quit()
+
+else:
+    print("Loser!")
+    quit()
